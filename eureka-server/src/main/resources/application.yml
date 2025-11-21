@@ -1,0 +1,24 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+# Eureka Server Configuration
+eureka:
+  client:
+    register-with-eureka: false  # Don't register itself
+    fetch-registry: false         # Don't fetch registry
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    enable-self-preservation: false  # Disable in dev (optional)
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.netflix.eureka: INFO
+    com.netflix.discovery: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"

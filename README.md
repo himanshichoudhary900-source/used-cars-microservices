@@ -349,33 +349,7 @@ mvn spring-boot:run
 | GET | `/api/users/{id}` | Get user by ID | - |
 | DELETE | `/api/users/{id}` | Delete user | - |
 
-**Registration Example:**
-```json
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "securePassword123",
-  "phone": "1234567890",
-  "address": "123 Main St"
-}
-```
 
-**Login Example:**
-```json
-{
-  "email": "john@example.com",
-  "password": "securePassword123"
-}
-```
-
-**Response:** JWT Token
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-}
-```
-
----
 
 ### Booking Service API
 
@@ -388,21 +362,6 @@ mvn spring-boot:run
 | POST | `/api/bookings` | Create new booking | BookingDto |
 | PUT | `/api/bookings/{id}/status` | Update status | Status |
 | DELETE | `/api/bookings/{id}` | Cancel booking | - |
-
-**BookingDto Example:**
-```json
-{
-  "carId": 1,
-  "userId": 1,
-  "customerName": "John Doe",
-  "contactNumber": "1234567890",
-  "vehicleModel": "Toyota Camry",
-  "serviceType": "MAINTENANCE",
-  "bookingDate": "2024-02-15",
-  "bookingTime": "10:00:00",
-  "notes": "Regular service needed"
-}
-```
 
 ## Features
 
